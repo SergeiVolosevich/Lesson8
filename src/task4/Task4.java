@@ -1,7 +1,7 @@
 package task4;
 
 
-//Найти и вывести слова текста, для которых последняя буква одного слова совпадает с первой буквой следующего слова.
+//РќР°Р№С‚Рё Рё РІС‹РІРµСЃС‚Рё СЃР»РѕРІР° С‚РµРєСЃС‚Р°, РґР»СЏ РєРѕС‚РѕСЂС‹С… РїРѕСЃР»РµРґРЅСЏСЏ Р±СѓРєРІР° РѕРґРЅРѕРіРѕ СЃР»РѕРІР° СЃРѕРІРїР°РґР°РµС‚ СЃ РїРµСЂРІРѕР№ Р±СѓРєРІРѕР№ СЃР»РµРґСѓСЋС‰РµРіРѕ СЃР»РѕРІР°.
 
 
 import java.io.*;
@@ -16,15 +16,15 @@ public class Task4 {
 
         String string = read().toString().toLowerCase();
 
-        System.out.println("Данные получены из файла");
+        System.out.println("Р”Р°РЅРЅС‹Рµ РїРѕР»СѓС‡РµРЅС‹ РёР· С„Р°Р№Р»Р°");
 
-//        String [] str = string.split("[«]");
+//        String [] str = string.split("[В«]");
 //        for (String s:str
 //             ) {
 //            System.out.println(s);
 //        }
 
-        String regex = "\\b[а-я]+\\b";
+        String regex = "\\b[Р°-СЏ]+\\b";
 
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(string);
@@ -43,7 +43,7 @@ public class Task4 {
 
         writeFile(linkedList);
 
-        System.out.println("Файл записан.");
+        System.out.println("Р¤Р°Р№Р» Р·Р°РїРёСЃР°РЅ.");
     }
 
     public static StringBuffer read() {
@@ -55,7 +55,7 @@ public class Task4 {
                 sb.append(str).append(" ");
             }
         } catch (IOException exc) {
-            System.out.println("Ошибка чтения файла.");
+            System.out.println("РћС€РёР±РєР° С‡С‚РµРЅРёСЏ С„Р°Р№Р»Р°.");
         }
         return sb;
     }
@@ -68,7 +68,7 @@ public class Task4 {
                 writer.write(iterator.next() + System.getProperty("line.separator"));
             }
         } catch (IOException exc) {
-            System.out.println("Ошибка записи в файл");
+            System.out.println("РћС€РёР±РєР° Р·Р°РїРёСЃРё РІ С„Р°Р№Р»");
         }
     }
 }

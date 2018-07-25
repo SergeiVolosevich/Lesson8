@@ -1,7 +1,7 @@
 package task2;
 
 
-//В каждой строке стихотворения найти и заменить заданную подстроку на подстроку иной длины.
+//Р’ РєР°Р¶РґРѕР№ СЃС‚СЂРѕРєРµ СЃС‚РёС…РѕС‚РІРѕСЂРµРЅРёСЏ РЅР°Р№С‚Рё Рё Р·Р°РјРµРЅРёС‚СЊ Р·Р°РґР°РЅРЅСѓСЋ РїРѕРґСЃС‚СЂРѕРєСѓ РЅР° РїРѕРґСЃС‚СЂРѕРєСѓ РёРЅРѕР№ РґР»РёРЅС‹.
 
 import java.io.*;
 
@@ -19,7 +19,7 @@ public class Task2 {
         }
 
         String regex = ("\\b" + substring + "\\b");
-        String str = string.replaceAll(regex, "Дубина");
+        String str = string.replaceAll(regex, "Р”СѓР±РёРЅР°");
 
         writeFile(str);
     }
@@ -39,11 +39,11 @@ public class Task2 {
     public static String subString() throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("Введите строку, которую хотите заменить:");
+        System.out.println("Р’РІРµРґРёС‚Рµ СЃС‚СЂРѕРєСѓ, РєРѕС‚РѕСЂСѓСЋ С…РѕС‚РёС‚Рµ Р·Р°РјРµРЅРёС‚СЊ:");
 
         String str = bf.readLine();
 
-        System.out.print("Строка, которую хотите заменить: " + str + "\n");
+        System.out.print("РЎС‚СЂРѕРєР°, РєРѕС‚РѕСЂСѓСЋ С…РѕС‚РёС‚Рµ Р·Р°РјРµРЅРёС‚СЊ: " + str + "\n");
 
         return str;
     }
@@ -54,7 +54,7 @@ public class Task2 {
             writer.write(string);
 
         } catch (IOException exc) {
-            System.out.println("Ошибка записи в файл");
+            System.out.println("РћС€РёР±РєР° Р·Р°РїРёСЃРё РІ С„Р°Р№Р»");
         }
     }
 }

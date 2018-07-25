@@ -1,7 +1,7 @@
 import java.io.*;
 
 
-//В каждой строке найти и удалить заданную подстроку.
+//Р’ РєР°Р¶РґРѕР№ СЃС‚СЂРѕРєРµ РЅР°Р№С‚Рё Рё СѓРґР°Р»РёС‚СЊ Р·Р°РґР°РЅРЅСѓСЋ РїРѕРґСЃС‚СЂРѕРєСѓ.
 
 public class Task1 {
     public static void main(String[] args) {
@@ -9,11 +9,11 @@ public class Task1 {
         String stringdelete = null;
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Ведите подстроку, которую хотите удалить:");
+        System.out.println("Р’РµРґРёС‚Рµ РїРѕРґСЃС‚СЂРѕРєСѓ, РєРѕС‚РѕСЂСѓСЋ С…РѕС‚РёС‚Рµ СѓРґР°Р»РёС‚СЊ:");
         try {
             stringdelete = reader.readLine();
         } catch (IOException exc) {
-            System.out.println("Ошибка ввода подстроки.");
+            System.out.println("РћС€РёР±РєР° РІРІРѕРґР° РїРѕРґСЃС‚СЂРѕРєРё.");
         }
 
         while ((string = getString()).compareTo("exit") != 0) {
@@ -30,11 +30,11 @@ public class Task1 {
         String str = null;
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Введите строку для записи в файл, или введите \"exit\", для выхода");
+        System.out.println("Р’РІРµРґРёС‚Рµ СЃС‚СЂРѕРєСѓ РґР»СЏ Р·Р°РїРёСЃРё РІ С„Р°Р№Р», РёР»Рё РІРІРµРґРёС‚Рµ \"exit\", РґР»СЏ РІС‹С…РѕРґР°");
         try {
             str = reader.readLine();
         } catch (IOException e) {
-            System.out.println("Ошибка ввода.");
+            System.out.println("РћС€РёР±РєР° РІРІРѕРґР°.");
         }
         return str;
     }
@@ -44,7 +44,7 @@ public class Task1 {
             str = str + "\r\n";
             fr.write(str);
         } catch (IOException exc) {
-            System.out.println("Ошибка записи.");
+            System.out.println("РћС€РёР±РєР° Р·Р°РїРёСЃРё.");
         }
     }
 
@@ -59,9 +59,9 @@ public class Task1 {
             }
 
         } catch (FileNotFoundException exc) {
-            System.out.println("Ошибка чтения файла.");
+            System.out.println("РћС€РёР±РєР° С‡С‚РµРЅРёСЏ С„Р°Р№Р»Р°.");
         } catch (IOException exc) {
-            System.out.println("Ошибка записи файла.");
+            System.out.println("РћС€РёР±РєР° Р·Р°РїРёСЃРё С„Р°Р№Р»Р°.");
         }
     }
 }

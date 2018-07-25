@@ -1,7 +1,7 @@
 package task3;
 
 
-//В каждой строке найти слова, начинающиеся с гласной буквы.
+//Р’ РєР°Р¶РґРѕР№ СЃС‚СЂРѕРєРµ РЅР°Р№С‚Рё СЃР»РѕРІР°, РЅР°С‡РёРЅР°СЋС‰РёРµСЃСЏ СЃ РіР»Р°СЃРЅРѕР№ Р±СѓРєРІС‹.
 
 import java.io.*;
 import java.util.Iterator;
@@ -13,9 +13,9 @@ public class Task3 {
     public static void main(String[] args) {
         String string = read().toString().toLowerCase();
 
-        System.out.println("Данные получены из файла");
+        System.out.println("Р”Р°РЅРЅС‹Рµ РїРѕР»СѓС‡РµРЅС‹ РёР· С„Р°Р№Р»Р°");
 
-        String regex = "\\b[ауоыиэяюёе]+[а-я]*\\b";
+        String regex = "\\b[Р°СѓРѕС‹РёСЌСЏСЋС‘Рµ]+[Р°-СЏ]*\\b";
 
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(string);
@@ -27,7 +27,7 @@ public class Task3 {
         }
 
         writeFile(linkedList);
-        System.out.println("Файл записан.");
+        System.out.println("Р¤Р°Р№Р» Р·Р°РїРёСЃР°РЅ.");
     }
 
     public static StringBuffer read() {
@@ -39,7 +39,7 @@ public class Task3 {
                 sb.append(str).append(" ");
             }
         } catch (IOException exc) {
-            System.out.println("Ошибка чтения файла.");
+            System.out.println("РћС€РёР±РєР° С‡С‚РµРЅРёСЏ С„Р°Р№Р»Р°.");
         }
         return sb;
     }
@@ -53,7 +53,7 @@ public class Task3 {
                 writer.write(iterator.next() + System.getProperty("line.separator"));
             }
         } catch (IOException exc) {
-            System.out.println("Ошибка записи в файл");
+            System.out.println("РћС€РёР±РєР° Р·Р°РїРёСЃРё РІ С„Р°Р№Р»");
         }
     }
 }
